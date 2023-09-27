@@ -8,16 +8,17 @@ public class GetterSetter_main extends GetterSetter {
 			System.out.println("Successfully login to Facebook");
 
 		} else {
-			System.out.println("UserName & Password Incorrect please try again");
+			System.err.println("UserName & Password Incorrect please try again");
 		}
 	}
 
-	public void createnewlogin(String user, String pass) {
+	public void create_new_password(String user, String pass) {
 		super.setUserName(user);
 		super.setPassword(pass);
 		if (super.getUserName() == user && super.getPassword() == pass) {
 
-			System.out.println("create new Password and Username");
+			System.out.println("create new Password and Username successfully");
+			System.out.println("UserName : "+super.getUserName()+", Paaword : "+super.getPassword());
 		} else {
 			System.out.println("fail");
 		}
@@ -27,7 +28,7 @@ public class GetterSetter_main extends GetterSetter {
 
 		GetterSetter_main s = new GetterSetter_main();
 		s.FbLogin("zakirbaig0313", "zakir@baig.0313");
-		s.createnewlogin("zakir", "baig");
+		s.create_new_password("zakir", "baig");
 		s.FbLogin("zakirbaig0313", "zakir@baig.0313");
 		s.FbLogin("zakir", "baig");
 	}
